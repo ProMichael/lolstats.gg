@@ -34,5 +34,17 @@
     xmlhttp.send();
   }
   </script>
+  <textarea id="summonerName"></textarea>
+  <select id="summonerServer" name="summonerServer">
+   <option value="na">North America</option>
+   <option value="euw">Europe West</option>
+   <option value="eune">Europe North and East</option>
+   <option value="oce">Oceania</option>
+   <option value="lan">Latin America North</option>
+   <option value="las">Latin America South</option>
+   <option value="br">Brazil</option>
+   <option value="tr">Turkey</option>
+  </select>
+  <button id="summonerNameSubmit" onclick="getInformation()">Submit</button>
  </body>
 </html>
