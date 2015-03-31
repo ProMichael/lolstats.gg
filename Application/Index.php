@@ -1,5 +1,5 @@
 <?php
-// Something will be here
+// Something will be here, eventually
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,18 +24,17 @@
     xmlhttp.onreadystatechange=function() {
       if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         var summonerName_split = xmlhttp.responseText;
-        var summonerServer_split = xmlhttp.responseText;
+        var summonerResults = xmlhttp.responseText;
 
-        document.getElementById("summonerServerInput").innerHTML = summonerServer_split;
-        document.getElementById("summonerNameLabel").innerHTML = summonerName_split;
+        document.getElementById("summonerNameInput").innerHTML = summonerName_split;
+        document.getElementById("summonerResults").innerHTML = summonerResults;
       }
     }
     xmlhttp.open("GET", "classes/Search.php?summoner=" + summonerName + "&server=" + summonerServer, true);
     xmlhttp.send();
   }
   </script>
-  <textarea id="summonerName"></textarea>
-  <select id="summonerServer" name="summonerServer">
+  <select id="summonerServerInput">
    <option value="na">North America</option>
    <option value="euw">Europe West</option>
    <option value="eune">Europe North and East</option>
@@ -45,6 +44,8 @@
    <option value="br">Brazil</option>
    <option value="tr">Turkey</option>
   </select>
-  <button id="summonerNameSubmit" onclick="getInformation()">Submit</button>
+  <label id="summonerResults"></label>
+  <textarea id="summonerNameInput"></textarea>
+  <button id="summonerTrigger" onclick="getInformation()">Search</button>
  </body>
 </html>
