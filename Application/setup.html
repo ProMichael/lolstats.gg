@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Home | LoLStats.gg</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="Assets/CSS/normalize.css?<?php echo date('Y');?>">
+  <link rel="stylesheet" type="text/css" href="Assets/CSS/960.css?<?php echo date('Y');?>">
+  <link rel="stylesheet" type="text/css" href="Assets/CSS/theme.css?<?php echo date('Y');?>">
+ </head>
+ <body>
+  <div class="container_12">
+   <header>
+    <div class="grid_4">
+     <div class="logo"><a href="index.php"><img src="Assets/Images/logo_final.png"/></a></div>
+    </div>
+    <div class="grid_8">
+     <nav>
+      <li style="margin-bottom:2px"><a href="#">Home</a></li>
+      <li style="margin-bottom:2px"><a href="#">Setup</a></li>
+      <li style="margin-bottom:2px"><a href="https://github.com/ProMichael/lolstats.gg">Help</a></li>
+      <li><a href="#" class="search">Search</a></li>
+     </nav>
+    </div>
+    <div class="title">
+     <h2>Setup Instructions</h2>
+     <div class="border"></div>
+    </div>
+   </header>
+  </div>
+  <div class="container">
+   <div class="container_12">
+    <div class="title">Thanks!</div>
+    <div class="text">Thanks for downloading <a href="https://github.com/ProMichael/lolstats.gg">LoLStats.gg</a>! If you don't have the latest version of the web application, please click <a href="https://github.com/ProMichael/lolstats.gg">here</a> and redownload it!</div>
+    <br><br>
+    <div class="title-2">Minimum Requirements</div>
+    <div class="text">Before you install LoLStats.gg. Be sure to check out the minimum requirements below.</div>
+    <div class="info">
+     <ul>
+      <li>A Computer</li>
+      <li>A Server that has MySQL Capabilities - Ex: <a href="http://www.wampserver.com/en/">Wamp Server</a></li>
+      <li>A League of Legends API Key - Get it <a href="https://developer.riotgames.com/account">Here</a></li>
+     </ul>
+    </div>
+    <div class="text">Once you have all of that, your all set to setup the application!</div>
+    <br><br>
+    <div class="title-2">Setup</div>
+    <div class="text">To install the SQL, you can simply create a new database called lolstats, or just execute the code below.</div>
+    <div class="info"><span style="color:#E74C3C">CREATE DATABASE</span> <span style="color:#9143B2">IF</span> NOT EXISTS `<span style="color:#7C818A">lolstats</span>`;</div>
+    <div class="text">We are going to create a table called apikeys, and it will have a row called <span style="color:#E74C3C">id</span> and <span style="color:#E74C3C">keys</span>. id is the primary key and auto increment on. Alternatively, just execute the code below.</div>
+    <div class="info"><span style="color:#E74C3C">CREATE TABLE</span> <span style="color:#9143B2">IF</span> NOT EXISTS `<span style="color:#7C818A">lolstats</span>`.`<span style="color:#7C818A">apikeys</span>` (<br/><span style="padding-left:5px;color:#E74C3C">`id`</span> <span style="color:#9143B2">int(11)</span> NOT NULL AUTO_INCREMENT,<br/><span style="padding-left:5px;color:#E74C3C">`key`</span> <span style="color:#9143B2">varchar(45)</span> COLLATE latin1_swedish_ci NULL,<br/><span style="padding-left:5px;color:#E74C3C">PRIMARY KEY</span> (<span style="color:#7C818A">`id`</span>)<br/>) AUTO_INCREMENT=1</div>
+    <div class="text">Once everything is set up, just insert your API Key into the keys field and everything should be ready to go!</div>
+    <br><br>
+    <div class="border"></div>
+    <button class="Search-btn">Get Started Now</button>
+   </div>
+  </div>
+ </body>
+</html>
